@@ -16,23 +16,25 @@ function getKoalas() {
 } // end getKoalas
 
 function renderKoalas(koalasList) {
-  let koalaTableBody = document.getElementById('koalaTableBody');
+  let koalaTableBody = document.getElementById('viewKoalas');
   koalaTableBody.innerHTML = '';
-  // Loop over each song and append data to the DOM
-  // for (let koala of koalasList) {
-  //   koalaTableBody.innerHTML += `
-  //     <tr>
-  //       <td>${koala.name}</td>
-  //       <td>${koala.age}</td>
-  //       <td>${koala.favoriteColor}</td>
-  //       <td>${koala.readyTransfer}</td>
-  //       <td>${koala.notes}</td>
-  //       <td>
-  //         <button onclick="deleteKoala(${koala.id})">Delete</button>
-  //       </td>
-  //     </tr>
-  //   `;
-  // }
+  //console.log("koalasList", koalasList)
+  //Loop over each song and append data to the DOM
+  for (let koala of koalasList) {
+    //console.log("koala", koala)
+    koalaTableBody.innerHTML += `
+      <tr>
+        <td>${koala.name}</td>
+        <td>${koala.age}</td>
+        <td>${koala.favorite_color}</td>
+        <td>${koala.ready_to_transfer}</td>
+        <td>${koala.notes}</td>
+        <td>
+          <button onclick="deleteKoala(${koala.id})">Delete</button>
+        </td>
+      </tr>
+    `;
+  }
 }
 
 function saveKoala() {
