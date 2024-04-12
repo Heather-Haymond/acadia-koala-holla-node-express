@@ -37,6 +37,10 @@ function renderKoalas(koalasList) {
   }
 }
 
+function addKoala(){
+  console.log("hey, hello world")
+}
+
 function saveKoala() {
   console.log('in saveKoala');
   // axios call to server to get koalas
