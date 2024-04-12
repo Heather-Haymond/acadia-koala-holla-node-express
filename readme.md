@@ -18,7 +18,7 @@ Client needs
 ------------
 Koala Holla has provided a table of their current residents:
 
-| id | name    | favorite_color | age | ready_to_transer | notes                            |
+| id | name    | favorite_color | age | ready_to_transfer | notes                            |
 |----|---------|--------|-----|------------------|----------------------------------|
 | 1  | Scotty  | Red      | 4   | Y                | Born in Guatemala                |
 | 2  | Jean    | Green      | 5   | Y                | Allergic to lots of lava         |
