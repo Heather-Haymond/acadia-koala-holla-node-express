@@ -32,13 +32,13 @@ koalaRouter.get('/', (req, res) => {
 
 // POST
 koalaRouter.post('/', (req, res) => {
-  console.log('POST koalas');
-  // const sqlText = `
-  // INSERT INTO "koalas"("name", "favorite_color", "age", "ready_to_transfer", "notes") 
-  // VALUES
-  // ('', 'Red', 4, true,	'Born in Guatemala'),
-    //`;})
-  });
+  console.log('POST koalas', req.body);
+  const sqlText = `
+  INSERT INTO "koalas"("name", "favorite_color", "age", "ready_to_transfer", "notes") 
+  VALUES
+  ($1, $2, $3, $4, $5);
+    `
+  })
 // PUT
 
 // DELETE

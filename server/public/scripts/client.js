@@ -1,5 +1,4 @@
 function getKoalas() {
-  console.log('in getKoalas');
   // axios call to server to get koalas
 
   axios({
@@ -38,7 +37,30 @@ function renderKoalas(koalasList) {
 }
 
 function addKoala(){
-  console.log("hey, hello world")
+let koalaName = document.getElementById('nameIn').value;
+let koalaAge = document.getElementById('ageIn').value; 
+let koalaColor = document.getElementById('colorIn').value; 
+let koalaTransfer = document.getElementById('readyForTransferIn').value;
+let koalaNotes = document.getElementById('notesIn').value;
+
+axios({
+  method: 'POST',
+  url: '/koalas',
+  data: {
+    name: koalaName, 
+    age: koalaAge, 
+    favorite_color: koalaColor,
+    ready_to_transfer: koalaTransfer,
+    notes: koalaNotes
+  }
+}).then((response) => {
+  console.log('response', response)
+  getKoalas();
+})
+// .catch((error) => {
+//   console.log('Error', error);
+// });
+
 }
 
 function saveKoala() {
